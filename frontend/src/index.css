@@ -1,0 +1,42 @@
+:root{
+  --bg: #ffffff;
+  --text: #111827;
+  --muted: #6b7280;
+  --card: #f8fafc;
+  --accent: #2563eb;
+}
+[data-theme='dark']{
+  --bg: #0b1220;
+  --text: #e6eef8;
+  --muted: #9aa8bd;
+  --card: #071022;
+  --accent: #60a5fa;
+}
+*{box-sizing:border-box;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial;}
+body,html,#root{height:100%;margin:0;background:var(--bg);color:var(--text);}
+.app-wrap{min-height:100vh;display:flex;flex-direction:column;padding:18px;}
+.app-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;}
+.muted{color:var(--muted);font-size:13px;}
+.header-actions{display:flex;gap:8px;align-items:center;}
+.search{padding:8px;border-radius:8px;border:1px solid #ddd;}
+.theme-btn{padding:8px 10px;border-radius:8px;border:0;background:transparent;cursor:pointer;}
+.cart-badge{background:var(--card);padding:6px 10px;border-radius:999px;}
+.container{display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:start;}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;}
+.card{background:var(--card);padding:12px;border-radius:10px;display:flex;flex-direction:column;gap:8px;box-shadow:0 1px 3px rgba(0,0,0,0.06);}
+.card-title{font-weight:600;}
+.price{color:var(--muted);}
+.btn{background:transparent;border:1px solid var(--accent);color:var(--accent);padding:8px;border-radius:8px;cursor:pointer;}
+.btn.primary{background:var(--accent);color:white;border:0;}
+.cart-panel{background:var(--card);padding:12px;border-radius:10px;}
+.cart-item{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(0,0,0,0.04);}
+.cart-actions{display:flex;gap:6px;align-items:center;}
+.remove{color:#ef4444;border:0;background:transparent;cursor:pointer;}
+.total{font-weight:700;margin-top:8px;text-align:right;}
+.checkout{display:flex;flex-direction:column;gap:8px;margin-top:8px;}
+.checkout input{padding:8px;border-radius:6px;border:1px solid #ddd;}
+/* modal */
+.modal{position:fixed;inset:0;background:rgba(2,6,23,0.6);display:flex;align-items:center;justify-content:center;padding:16px;}
+.modal-content{background:var(--bg);padding:18px;border-radius:12px;max-width:420px;width:100%;box-shadow:0 10px 30px rgba(2,6,23,0.4);}
+@media(max-width:800px){ .container{grid-template-columns:1fr;} .grid{grid-template-columns:repeat(2,1fr);} }
+@media(max-width:520px){ .grid{grid-template-columns:1fr;} }
