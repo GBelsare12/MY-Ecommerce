@@ -29,3 +29,30 @@ This project demonstrates a full-stack workflow — from backend API creation to
 ```bash
 git clone https://github.com/GBelsare12/MY-Ecommerce.git
 cd MY-Ecommerce
+🧠 2. Backend Setup
+cd backend
+npm install
+npm run dev
+
+
+Backend runs on http://localhost:5000
+
+💻 3. Frontend Setup
+
+Open a new terminal:
+
+cd frontend
+npm install
+npm run dev
+
+
+Frontend runs on http://localhost:5173
+
+🧰 API Endpoints
+Method	Endpoint	Description
+GET	/api/products	Get product list
+POST	/api/cart	Add item to cart
+DELETE	/api/cart/:id	Remove item from cart
+GET	/api/cart	Get current cart & total
+POST	/api/checkout	Checkout (mock receipt)
+
